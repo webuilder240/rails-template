@@ -6,11 +6,4 @@ import FullReload from 'vite-plugin-full-reload'
 export default defineConfig({
   clearScreen: false,
   plugins: [RubyPlugin(), StimulusHMR(), FullReload(['config/routes.rb', 'app/views/**/*'], { delay: 200 })],
-  root: './app/assets',
-  build: {
-    manifest: true,
-    rollupOptions: {
-      input: '/app/javascript/entrypoints/application.ts',
-    },
-  },
 })
